@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Enumerables\" />
+    <Folder Include="Dto%27s\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+</Project>
