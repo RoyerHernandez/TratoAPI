@@ -19,5 +19,12 @@ namespace ServiciosWeb.APITrato.Controllers
             var paises = await _paisRepositorio.GetPais();
             return Ok(paises);
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCountry(int id)
+        {
+            var paises = await _paisRepositorio.GetCountry(id);
+            return Ok(paises);
+        }
+
     }
 }

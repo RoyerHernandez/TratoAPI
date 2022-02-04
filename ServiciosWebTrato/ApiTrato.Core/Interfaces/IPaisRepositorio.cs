@@ -8,6 +8,8 @@ namespace ApiTrato.Core.Interfaces
 {
     public interface IPaisRepositorio
     {
-        public Task<IEnumerable<Pais>> GetPais();
+        public Task<IEnumerable<Country>> GetPais();
+        public Task<Country> GetCountry(int id);
+        public Task InsertCountry(Country country);
     }
 }

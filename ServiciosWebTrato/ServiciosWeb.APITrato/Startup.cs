@@ -34,8 +34,9 @@ namespace ServiciosWeb.APITrato
             services.AddDbContext<TRATO_DATABASEContext>( options =>
                                      options.UseSqlServer(Configuration.GetConnectionString("TratoDB")));
 
-            services.AddTransient<IPaisRepositorio, PaisRepositorio>();
+            services.AddTransient<IPaisRepositorio, PaisRepositorio>();            
             services.AddTransient<ICountryRepository, CountryRepository >();
+            services.AddTransient<ICityRepository, CityRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

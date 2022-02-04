@@ -7,8 +7,8 @@ namespace ApiTrato.Core.Entities
     {
         public Categories()
         {
-            Exchanges = new HashSet<Intercambios>();
-            Auctions = new HashSet<Subastas>();
+            Exchanges = new HashSet<Exchanges>();
+            Auctions = new HashSet<Auctions>();
         }
 
         public int CategoryId { get; set; }
@@ -16,7 +16,7 @@ namespace ApiTrato.Core.Entities
         public string Description { get; set; }
         public string Image { get; set; }
 
-        public virtual ICollection<Intercambios> Exchanges { get; set; }
-        public virtual ICollection<Subastas> Auctions { get; set; }
+        public virtual ICollection<Exchanges> Exchanges { get; set; }
+        public virtual ICollection<Auctions> Auctions { get; set; }
     }
 }

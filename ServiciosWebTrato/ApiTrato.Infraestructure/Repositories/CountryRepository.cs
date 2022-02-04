@@ -15,11 +15,21 @@ namespace ApiTrato.Infraestructure.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Pais>> GetPais()
+        public async Task<IEnumerable<Country>> GetCountry()
         {
-            var paises = await _context.Pais.ToListAsync();
+            var paises = await _context.Countries.ToListAsync();
             await Task.Delay(10);
             return paises;
+        }
+        public async Task<Country> GetCountry(int id)
+        {
+            var countries = await _context.Countries.FirstOrDefaultAsync(x => x.CountryId == id);
+            return countries;
+        }
+        public async Task InsertCountry(Country country)
+        {
+            _context.Countries.Add(country);
+            await _context.SaveChangesAsync();
         }
     }
 }
