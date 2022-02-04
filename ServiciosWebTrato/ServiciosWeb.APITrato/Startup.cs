@@ -37,6 +37,8 @@ namespace ServiciosWeb.APITrato
             services.AddTransient<IPaisRepositorio, PaisRepositorio>();            
             services.AddTransient<ICountryRepository, CountryRepository >();
             services.AddTransient<ICityRepository, CityRepository>();
+            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

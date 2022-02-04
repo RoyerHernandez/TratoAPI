@@ -10,5 +10,6 @@ namespace ApiTrato.Core.Interfaces
     {
         public Task<IEnumerable<Cities>> GetCity();
         public Task<Cities> GetCity(int id);
+        public Task InsertCity(Cities cities);
     }
 }

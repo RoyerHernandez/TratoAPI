@@ -20,11 +20,15 @@ namespace ApiTrato.Infraestructure.Repositories
             var cities = await _context.Cities.ToListAsync();
             return cities;
         }
-
         public async Task<Cities> GetCity(int id)
         {
             var city = await _context.Cities.FirstOrDefaultAsync(x => x.CityId == id) ;
             return city;
+        }
+        public async Task InsertCity(Cities cities)
+        {
+            _context.Add(cities);
+            await _context.SaveChangesAsync();
         }
     }
 }

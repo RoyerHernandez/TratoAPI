@@ -1,4 +1,5 @@
-﻿using ApiTrato.Core.Interfaces;
+﻿using ApiTrato.Core.Entities;
+using ApiTrato.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -24,6 +25,12 @@ namespace ServiciosWeb.APITrato.Controllers
         {
             var city = await _cityRepository.GetCity(id);
             return Ok(city);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Cities(Cities cities)
+        {
+            await _cityRepository.InsertCity(cities);
+            return Ok(cities);
         }
     }
 }
