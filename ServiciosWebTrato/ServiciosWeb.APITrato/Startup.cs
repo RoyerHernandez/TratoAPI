@@ -38,6 +38,8 @@ namespace ServiciosWeb.APITrato
             services.AddTransient<ICountryRepository, CountryRepository >();
             services.AddTransient<ICityRepository, CityRepository>();
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+            services.AddTransient<ILocationRepository, LocationRepository>();
+            services.AddTransient<IStateRepository, StateRepository>();
 
         }
 
